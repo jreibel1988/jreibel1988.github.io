@@ -1,0 +1,188 @@
+@import url('https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #212529; /* Darker background */
+    color: #e9ecef; /* Light text color */
+    text-align: center;
+}
+
+.hero {
+    padding: 50px;
+    background: linear-gradient(135deg, #343a40, #495057); /* Darker gradient */
+    color: #e9ecef; /* Light text color */
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+button, form button {
+    padding: 10px 20px;
+    background: #495057; /* Darker background for buttons */
+    color: #e9ecef; /* Light text color */
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin: 5px; /* Add margin for spacing between buttons */
+}
+
+button:hover, form button:hover {
+    background: #6c757d; /* Slightly lighter background on hover */
+}
+
+.features-section, .contact-section {
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.features-section h2, .contact-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.feature {
+    margin: 20px;
+}
+
+form input, form textarea {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #6c757d; /* Darker border */
+    border-radius: 5px;
+    background-color: #495057; /* Dark background */
+    color: #e9ecef; /* Light text color */
+}
+
+.analytics-section, .recent-activities-section, .user-management-section {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.analytics-section h2, .recent-activities-section h2, .user-management-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.analytics-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.analytics-card {
+    background: #495057;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    color: #e9ecef;
+    flex: 1 1 calc(33.333% - 20px);
+    box-sizing: border-box;
+}
+
+.analytics-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.analytics-card p {
+    font-size: 1.2rem;
+}
+
+.recent-activities-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.recent-activities-section li {
+    background: #495057;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    color: #e9ecef;
+}
+
+.user-management-section table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.user-management-section th, .user-management-section td {
+    padding: 10px;
+    border: 1px solid #6c757d;
+}
+
+.user-management-section th {
+    background: #343a40;
+    color: #e9ecef;
+}
+
+.user-management-section td {
+    background: #495057;
+    color: #e9ecef;
+}
+
+.dashboard-section {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.dashboard-card {
+    background: #495057;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    color: #e9ecef;
+    flex: 1 1 calc(33.333% - 20px);
+    box-sizing: border-box;
+}
+
+.dashboard-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.dashboard-card p {
+    font-size: 1.2rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #6c757d;
+}
+
+th {
+    background: #343a40;
+    color: #e9ecef;
+}
+
+td {
+    background: #495057;
+    color: #e9ecef;
+}
