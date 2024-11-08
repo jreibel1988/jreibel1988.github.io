@@ -3,10 +3,15 @@ function scrollToSection(sectionId) {
 }
 
 function navigateTo(page) {
-    // Logic to navigate to different pages or sections
-    scrollToSection(page);
+    if (page === 'dashboard') {
+        // Navigate to the dashboard section in index.html
+        window.location.href = '../index.html#dashboard';
+    } else {
+        // Scroll to a section within the current page
+        scrollToSection(page);
+    }
 }
 
 function navigateToDashboard() {
-    window.location.href = 'index.html#dashboard';
+    window.location.href = '../index.html#dashboard';
 }
