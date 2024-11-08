@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Purchase Order</title>
     <link rel="stylesheet" href="https://jreibel1988.github.io/Main/css/style.css">
+    <script src="https://jreibel1988.github.io/Main/js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            loadPurchaseOrders();
+        });
+    </script>
 </head>
 <body class="dark-theme">
 
@@ -13,101 +19,14 @@
         <h1>Purchase Order</h1>
         <p>Review and manage your purchase order details</p>
         <button onclick="navigateToDashboard()">Back to Dashboard</button>
+        <button onclick="window.location.href='salesorder.html'">Sales Orders</button>
+        <button onclick="window.location.href='shipments.html'">Shipments</button>
+        <button onclick="window.location.href='poreceipts.html'">Purchase Order Receipts</button>
     </header>
 
-    <!-- Purchase Order Details -->
-    <section class="purchase-order-details">
-        <h2>Order #PO123456</h2>
-        <p><strong>Order Date:</strong> November 7, 2024</p>
-        <p><strong>Supplier:</strong> ABC Supplies Co.</p>
-        <p><strong>Order Status:</strong> Pending</p>
-    </section>
-
-    <!-- Items List -->
-    <section class="order-items">
-        <h3>Order Items</h3>
-        <table>
-            <thead>
-                <tr>
-                    <th>Item</th>
-                    <th>Description</th>
-                    <th>Quantity</th>
-                    <th>Unit Price</th>
-                    <th>Total</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Product A</td>
-                    <td>High-quality material</td>
-                    <td>10</td>
-                    <td>$50.00</td>
-                    <td>$500.00</td>
-                </tr>
-                <tr>
-                    <td>Product B</td>
-                    <td>Industrial component</td>
-                    <td>5</td>
-                    <td>$75.00</td>
-                    <td>$375.00</td>
-                </tr>
-                <tr>
-                    <td>Product C</td>
-                    <td>Replacement part</td>
-                    <td>8</td>
-                    <td>$20.00</td>
-                    <td>$160.00</td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
-
-    <!-- Total Cost Section -->
-    <section class="order-summary">
-        <h3>Order Summary</h3>
-        <p><strong>Subtotal:</strong> $1035.00</p>
-        <p><strong>Shipping:</strong> $50.00</p>
-        <p><strong>Tax:</strong> $83.00</p>
-        <p><strong>Total:</strong> $1168.00</p>
-    </section>
-
     <!-- Purchase Orders Data Table -->
-    <section class="purchase-orders-table">
-        <h3>All Purchase Orders</h3>
-        <table>
-            <thead>
-                <tr>
-                    <th>Order ID</th>
-                    <th>Order Date</th>
-                    <th>Supplier</th>
-                    <th>Status</th>
-                    <th>Total</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>PO123456</td>
-                    <td>November 7, 2024</td>
-                    <td>ABC Supplies Co.</td>
-                    <td>Pending</td>
-                    <td>$1168.00</td>
-                </tr>
-                <tr>
-                    <td>PO123457</td>
-                    <td>November 8, 2024</td>
-                    <td>XYZ Supplies Co.</td>
-                    <td>Completed</td>
-                    <td>$500.00</td>
-                </tr>
-                <tr>
-                    <td>PO123458</td>
-                    <td>November 9, 2024</td>
-                    <td>LMN Supplies Co.</td>
-                    <td>Shipped</td>
-                    <td>$750.00</td>
-                </tr>
-            </tbody>
-        </table>
+    <section id="purchase-orders" class="purchase-orders-section">
+        <!-- Content will be loaded here via AJAX -->
     </section>
 
     <!-- Contact Information -->

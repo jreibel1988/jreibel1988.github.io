@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Orders</title>
+    <link rel="stylesheet" href="https://jreibel1988.github.io/Main/css/style.css">
+</head>
+<body class="dark-theme">
+
+    <!-- Header Section -->
+    <header class="hero">
+        <h1>Sales Orders</h1>
+        <p>Review and manage your sales orders</p>
+        <button onclick="navigateToDashboard()">Back to Dashboard</button>
+        <button onclick="window.location.href='purchaseorder.html'">Purchase Orders</button>
+        <button onclick="window.location.href='shipments.html'">Shipments</button>
+        <button onclick="window.location.href='poreceipts.html'">Purchase Order Receipts</button>
+    </header>
+
+    <!-- Sales Orders Data Table -->
+    <section class="sales-orders-table">
+        <h3>All Sales Orders</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Order Date</th>
+                    <th>Customer</th>
+                    <th>Status</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>SO123456</td>
+                    <td>November 7, 2024</td>
+                    <td>John Doe</td>
+                    <td>Pending</td>
+                    <td>$1168.00</td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </section>
+
+    <script src="https://jreibel1988.github.io/Main/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase Order Receipts</title>
+    <link rel="stylesheet" href="https://jreibel1988.github.io/Main/css/style.css">
+</head>
+<body class="dark-theme">
+
+    <!-- Header Section -->
+    <header class="hero">
+        <h1>Purchase Order Receipts</h1>
+        <p>Review and manage your purchase order receipts</p>
+        <button onclick="navigateToDashboard()">Back to Dashboard</button>
+        <button onclick="window.location.href='purchaseorder.html'">Purchase Orders</button>
+        <button onclick="window.location.href='salesorder.html'">Sales Orders</button>
+        <button onclick="window.location.href='shipments.html'">Shipments</button>
+    </header>
+
+    <!-- Purchase Order Receipts Data Table -->
+    <section class="purchase-order-receipts-table">
+        <h3>All Purchase Order Receipts</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Receipt ID</th>
+                    <th>Receipt Date</th>
+                    <th>Supplier</th>
+                    <th>Status</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>PR123456</td>
+                    <td>November 7, 2024</td>
+                    <td>ABC Supplies Co.</td>
+                    <td>Received</td>
+                    <td>$1168.00</td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </section>
+
+    <script src="https://jreibel1988.github.io/Main/js/script.js"></script>
+</body>
+</html>

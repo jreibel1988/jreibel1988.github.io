@@ -6,7 +6,43 @@
     <title>ERP Dashboard</title>
     <link rel="stylesheet" href="https://jreibel1988.github.io/Main/css/style.css">
     <link rel="icon" href="https://yourwebsite.com/favicon.ico" type="image/x-icon">
-    
+    <script src="https://jreibel1988.github.io/Main/js/script.js"></script>
+    <script>
+        function navigateToDashboard() {
+            window.location.href = '../index.html#dashboard';
+        }
+
+        function loadPurchaseOrders() {
+            fetch('https://irental.app.n8n.cloud/webhook/890c0b9e-27e4-49c1-b872-db91d2366d7e')
+                .then(response => response.json())
+                .then(data => {
+                    if (!Array.isArray(data)) {
+                        throw new TypeError('Expected an array of purchase orders');
+                    }
+                    console.log(data); // Handle the JSON data here
+                    // Example: Display the data in a table or any other format
+                    const purchaseOrdersSection = document.getElementById('purchase-orders');
+                    purchaseOrdersSection.innerHTML = '<h2>Purchase Orders</h2>';
+                    const table = document.createElement('table');
+                    const thead = document.createElement('thead');
+                    thead.innerHTML = '<tr><th>Order ID</th><th>Item</th><th>Quantity</th><th>Price</th></tr>';
+                    table.appendChild(thead);
+                    const tbody = document.createElement('tbody');
+                    data.forEach(order => {
+                        const row = document.createElement('tr');
+                        row.innerHTML = `<td>${order.id}</td><td>${order.item}</td><td>${order.quantity}</td><td>${order.price}</td>`;
+                        tbody.appendChild(row);
+                    });
+                    table.appendChild(tbody);
+                    purchaseOrdersSection.appendChild(table);
+                })
+                .catch(error => console.error('Error loading purchase orders:', error));
+        }
+
+        function loadShipments() {
+            window.location.href = 'Main/shipments.html';
+        }
+    </script>
 </head>
 <body class="dark-theme">
 
@@ -18,7 +54,8 @@
         <button onclick="navigateTo('recent-activities')">Recent Activities</button>
         <button onclick="navigateTo('user-management')">User Management</button>
         <button onclick="navigateToDashboard()">Dashboard</button>
-        <button onclick="window.location.href='Main/purchaseorder.html'">Purchase Order</button>
+        <button onclick="loadPurchaseOrders()">Purchase Order</button>
+        <button onclick="loadShipments()">Shipments</button>
     </header>
 
     <!-- Analytics Section -->
@@ -89,6 +126,16 @@
             <h3>Card 3</h3>
             <p>Content for card 3</p>
         </div>
+    </section>
+
+    <!-- Purchase Orders Section -->
+    <section id="purchase-orders" class="purchase-orders-section">
+        <!-- Content will be loaded here via AJAX -->
+    </section>
+
+    <!-- Shipments Section -->
+    <section id="shipments" class="shipments-section">
+        <!-- Content will be loaded here via AJAX -->
     </section>
 
     <script src="https://jreibel1988.github.io/Main/js/script.js"></script>

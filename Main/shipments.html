@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipments</title>
+    <link rel="stylesheet" href="https://jreibel1988.github.io/Main/css/style.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+</head>
+<body class="dark-theme">
+
+    <!-- Header Section -->
+    <header class="hero">
+        <h1>Shipments</h1>
+        <p>Review and manage your shipments</p>
+        <button onclick="navigateToDashboard()">Back to Dashboard</button>
+        <button onclick="window.location.href='purchaseorder.html'">Purchase Orders</button>
+        <button onclick="window.location.href='salesorder.html'">Sales Orders</button>
+        <button onclick="window.location.href='poreceipts.html'">Purchase Order Receipts</button>
+    </header>
+
+    <!-- Shipments Data Table -->
+    <section id="shipments" class="shipments-section">
+        <!-- Content will be loaded here via AJAX -->
+    </section>
+
+    <!-- Initialize DataTable -->
+    <script>
+        function initializeDataTable() {
+            $('#shipments-table').DataTable();
+        }
+    </script>
+
+    <!-- Include script.js before calling loadShipments -->
+    <script src="https://jreibel1988.github.io/Main/js/script.js"></script>
+
+    <!-- Call loadShipments after script.js is loaded -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            loadShipments();
+        });
+    </script>
+</body>
+</html>
